@@ -1,2 +1,2 @@
 # DIVE INTO CODE機械学習コース
-DIVE INTO CODE機械学習コースの課題を管理するリポジトリです。test1231
+DIVE INTO CODE機械学習コースの課題を管理するリポジトリです。test103
