@@ -68,15 +68,11 @@ print("厚さ : {:.2f}万キロメートル".format(answer3))
 #####
 '''
 #問題5
-box = [0.00008, 0.00016]
+box = []
 THICKNESS = 0.00008
-S = a =  2
-n = 43
-
-for i in range(n-1):
-    S *= a
-    answer = THICKNESS * S
-    box.append(answer)
+for i in range(1, 44):
+    THICKNESS *= 2
+    box.append(THICKNESS)
     print(box)
 #print(answer)
 print(len(box))
