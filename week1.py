@@ -18,14 +18,10 @@ else:
 
 #問題3
 THICKNESS = 0.00008
-S = a = 2
-n = 43
-
-for i in range(n-1):
-    S *= a
-    answer3 = THICKNESS * S
-    answer4 = answer3/10000000
-print("厚さ : {:.2f}万キロメートル".format(answer4))
+for i in range(1, 44):
+    THICKNESS *= 2
+    answer3 = THICKNESS/10000000
+print("厚さ : {:.2f}万キロメートル".format(answer3))
 
 #問題4
 
@@ -46,19 +42,31 @@ import time
 start = time.time()
 #####
 THICKNESS = 0.00008
-S = a =  2
-n = 43
-
-for i in range(n-1):
-    S *= a
-    answer = THICKNESS * S
-#print("厚さ: {}メートル".format(answer))
+for i in range(1, 44):
+    THICKNESS *= 2
+    answer3 = THICKNESS/10000000
+#print("厚さ : {:.2f}万キロメートル".format(answer3))
 #####
 elapsed_time = time.time() - start
 print("for文を使う方法")
 print("time : {}[s]".format(elapsed_time))
 
-
+'''
+%%timeit
+#####
+THICKNESS = 0.00008
+folded_thickness = THICKNESS*2**43
+print("厚さ： {}メートル".format(folded_thickness))
+#####
+%%timeit
+#####
+THICKNESS = 0.00008
+for i in range(1, 44):
+    THICKNESS *= 2
+    answer3 = THICKNESS/10000000
+print("厚さ : {:.2f}万キロメートル".format(answer3))
+#####
+'''
 #問題5
 box = [0.00008, 0.00016]
 THICKNESS = 0.00008
